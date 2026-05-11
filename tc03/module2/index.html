@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Webpage</title>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>My <span style="font-size: larger;">First</span> Webpage</h1>
+        </div>
+        <div>
+            <h3>This is my first ever website</h3>
+        </div>
+    </header>
+
+    <main>
+        <nav>
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+        </nav>
+        <section>
+            <article>
+                <p>
+                    This is how a basic webpage looks like. This uses some of the basic tags used in webpage development. The basic HTML tage are:
+                    <ul>
+                        <li>div - divsion tag</li>
+                        <li>p - paragraph tag</li>
+                        <li>a - anchor tag</li>
+                        <li>img - image tag</li>
+                        <li>ul - unordered list tag</li>
+                        <li>ol - ordered list tag</li>
+                    </ul>
+                    Some tags are usually used to organize the contents of our page. These are called the semantic tags. Here are the 6 semantic tags in HTML:
+                    <ol>
+                        <li>header</li>
+                        <li>nav</li>
+                        <li>main</li>
+                        <li>section</li>
+                        <li>article</li>
+                        <li>footer</li>
+                    </ol>
+                </p>
+                <p>
+                    To show basic information, we use table. An example of a table is shown below:
+                    <!-- table>caption+thead>tr>th*3 -->
+                    <table>
+                        <caption>Some basic information</caption>
+                        <thead>
+                            <tr>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Age</th>
+                            </tr>
+                        </thead>
+                        <!-- tbody>tr*3>td*3 -->
+                        <tbody>
+                            <tr>
+                                <td>Melissa</td>
+                                <td>Calleja</td>
+                                <td>25</td>
+                            </tr>
+                            <tr>
+                                <td>Jlo</td>
+                                <td>Calleja</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td>Janelle</td>
+                                <td>Calleja</td>
+                                <td>1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </p>
+            </article>
+        </section>
+        <section>
+            <article>
+                <p>For feedback, please use the form below:</p>
+                <form action="" method="post">
+                    <div>
+                        <label for="fullname">Full Name:</label>
+                        <input type="text" name="fullname" placeholder="Type your full name here...">
+                    </div>
+                    <div>
+                        <label for="email">E-mail:</label>
+                        <input type="email" name="email">
+                    </div>
+                    <div>
+                        <input type="radio" name="sex" value="Male">
+                        <label for="sex">Male</label>
+                        <input type="radio" name="sex" value="Male">
+                        <label for="sex">Female</label>
+                    </div>
+                    <div>
+                        <p>
+                            Do you want to receive email about our page?
+                            <label for="newsletter">Yes</label>
+                            <input type="checkbox" name="newsletter" value="Yes">
+                            <label for="newsletter">No</label>
+                            <input type="checkbox" name="newsletter" value="No">
+                        </p>
+                    </div>
+                    <div>
+                        <label for="country">From what country are you?</label>
+                        <select name="country">
+                            <option value="">---Select one---</option>
+                            <option value="ph">Philippines</option>
+                            <option value="jp">Japan</option>
+                            <option value="kr">Korea</option>
+                            <option value="us">United States of America</option>
+                        </select>
+                    </div>
+                    <!-- div>label+textarea:cols:rows -->
+                    <div>
+                        <label for="comments">Please leave us a comment about our webpage:<br></label>
+                        <textarea name="comments" cols="40" rows="3"></textarea>
+                    </div>
+                    <!-- div>button:submit+button:reset -->
+                    <div>
+                        <button type="submit" title="Click to submit data">Submit</button>
+                        <button type="reset">Clear</button>
+                    </div>
+                </form>
+            </article>
+            <article>
+                <h2>My Favorite Cars</h2>
+                <img src="images\mazda-rx8.jpg" alt="A picture of Mazda RX8" width="500px">
+                <img src="https://external-preview.redd.it/a-2013-lamborghini-gallardo-spyder-just-sold-for-578-000-on-v0-bHx2vyiZNuxNMzXylWsNYTixu7ThVOaqLQeuP_wnjCs.jpg?auto=webp&s=349d6d59ed0573754fab54ecab580d178ad2eca0" alt="Picture of Lamborghini Gallardo" width="500px">
+            </article>
+        </section>
+        <section>
+            <h3>My Favorite Music Playlist</h3>
+            <iframe src="https://music.youtube.com/playlist?list=PLqW8yd4I8CzmgcjDGdwiZ-C0tRljcoFXz&si=5xJYIemGHN2lX5cE" frameborder="0"></iframe>
+            <div><p>Or visit the playlist here: <a href="https://music.youtube.com/playlist?list=PLqW8yd4I8CzmgcjDGdwiZ-C0tRljcoFXz&si=5xJYIemGHN2lX5cE" target="_blank">Click to open my playlist</a></p></div>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <p>
+                <em>This page is developed by:</em> <strong>Joseph Q. Calleja &copy;2026</strong>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
