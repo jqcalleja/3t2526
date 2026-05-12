@@ -85,7 +85,7 @@ body {
     padding: var(--nav-padding);
     border-radius: var(--border-radius);
 
-    transition: transform 0.5s ease;
+    transition: transform 0.3s ease;
 }
 
 .navigation li:hover {
@@ -116,6 +116,7 @@ body {
 
 .main-content ul {
     padding-left: 20px;
+    list-style-type: square;
 }
 
 /* FOOTER */
