@@ -1,0 +1,54 @@
+:root {
+    --spacing: 20px;
+    --shadow: 0 2px 6x rgba(0, 0, 0, 0.15);
+
+    --border-radius: 10px;
+
+    --font-main: Arial, sans-serrif;
+    --font-titles: 'Times New Roman', serif;
+}
+
+/* GLOBAL STYLE */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-main);
+    padding: var(--spacing);
+}
+
+
+/* CONTENT GRID LAYOUT */
+.container {
+    display: grid;
+    grid-template-rows:
+        auto /* first row */
+        1fr /* second row */
+        auto; /* third row */
+    gap: var(--spacing);
+    min-height: 100vh;
+}
+
+/* HEADER/BANNER */
+.banner {
+    background-color: var(--primary-color);
+    color: white;
+    padding: var(--spacing);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.banner h1 {
+    font-size: 3.5rem;
+}

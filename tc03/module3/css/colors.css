@@ -1,0 +1,12 @@
+/* THESE ARE CSS VARIABLES */
+
+:root {
+    --bg-color: #f4f4f4;
+    --text-color: #222;
+    --primary-color: #4a90e2;
+    --secondary-color: #ffffff;
+
+    --nav-bg: #dfe9f3;
+    --main-bg: #ffffff;
+    --footer-bg: #333;
+}
