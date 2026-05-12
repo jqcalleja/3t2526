@@ -1,6 +1,8 @@
 :root {
     --spacing: 20px;
-    --shadow: 0 2px 6x rgba(0, 0, 0, 0.15);
+    --nav-spacing: 5px;
+    --nav-padding: 15px;
+    --shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 
     --border-radius: 10px;
 
@@ -28,9 +30,12 @@ body {
 .container {
     display: grid;
     grid-template-rows:
-        auto /* first row */
-        1fr /* second row */
-        auto; /* third row */
+        auto
+        /* first row */
+        1fr
+        /* second row */
+        auto;
+    /* third row */
     gap: var(--spacing);
     min-height: 100vh;
 }
@@ -51,4 +56,73 @@ body {
 
 .banner h1 {
     font-size: 3.5rem;
+    font-family: var(--font-titles);
+}
+
+/* CONTENT */
+.content-area {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: var(--spacing);
+}
+
+/* Navigation */
+
+.navigation {
+    background-color: var(--nav-bg);
+    padding: var(--spacing);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.navigation ul {
+    list-style: none;
+    margin-top: 15px;
+}
+
+.navigation li {
+    margin-bottom: var(--nav-spacing);
+    padding: var(--nav-padding);
+    border-radius: var(--border-radius);
+
+    transition: transform 0.5s ease;
+}
+
+.navigation li:hover {
+    background-color: var(--primary-color);
+    font-weight: bold;
+    color: var(--secondary-color);
+
+    transform: scale(1.1);
+}
+
+.navigation a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+/* Main Content */
+.main-content {
+    background-color: var(--main-bg);
+    padding: var(--spacing);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.main-content p,
+.main-content ul {
+    margin-top: 15px;
+}
+
+.main-content ul {
+    padding-left: 20px;
+}
+
+/* FOOTER */
+.footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    text-align: center;
+    padding: var(--spacing);
+    border-radius: var(--border-radius);
 }
