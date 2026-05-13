@@ -41,6 +41,188 @@ body {
 }
 
 /* HEADER/BANNER */
+/* =========================
+   ANIMATED BANNER
+========================= */
+
+.banner {
+  position: relative;
+  overflow: hidden;
+
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    #6bb5ff,
+    #357abd
+  );
+
+  background-size: 300% 300%;
+
+  color: white;
+  padding: var(--spacing);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  animation: gradientMove 8s ease infinite;
+}
+
+/* =========================
+   FLOATING LIGHT EFFECT
+========================= */
+
+.banner::before,
+.banner::after {
+  content: "";
+
+  position: absolute;
+  border-radius: 50%;
+
+  background: rgba(255,255,255,0.15);
+
+  animation: floatBubble linear infinite;
+}
+
+/* Large floating circle */
+.banner::before {
+  width: 220px;
+  height: 220px;
+
+  top: -80px;
+  left: -60px;
+
+  animation-duration: 12s;
+}
+
+/* Small floating circle */
+.banner::after {
+  width: 140px;
+  height: 140px;
+
+  bottom: -50px;
+  right: -30px;
+
+  animation-duration: 9s;
+}
+
+/* =========================
+   TEXT ANIMATION
+========================= */
+
+.banner h1,
+.banner p,
+.banner button {
+  position: relative;
+  z-index: 1;
+}
+
+.banner h1 {
+  animation: slideDown 1s ease;
+}
+
+.banner p {
+  animation: fadeIn 2s ease;
+}
+
+/* =========================
+   BUTTON HOVER EFFECT
+========================= */
+
+.banner button {
+  width: fit-content;
+  padding: 10px 15px;
+
+  border: none;
+  border-radius: var(--border-radius);
+
+  cursor: pointer;
+
+  background-color: white;
+  color: var(--primary-color);
+
+  font-weight: bold;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.banner button:hover {
+  transform: translateY(-3px) scale(1.05);
+
+  box-shadow:
+    0 5px 15px rgba(255,255,255,0.4);
+}
+
+/* =========================
+   KEYFRAMES
+========================= */
+
+/* Animated gradient background */
+@keyframes gradientMove {
+
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+
+}
+
+/* Floating circles */
+@keyframes floatBubble {
+
+  0% {
+    transform: translateY(0px) translateX(0px);
+  }
+
+  50% {
+    transform: translateY(20px) translateX(15px);
+  }
+
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+
+}
+
+/* Heading entrance */
+@keyframes slideDown {
+
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+/* Paragraph fade */
+@keyframes fadeIn {
+
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+
+}
+
 .banner {
     background-color: var(--primary-color);
     color: white;
