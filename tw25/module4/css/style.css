@@ -1,0 +1,113 @@
+:root {
+    /* COLOR VALUES */
+    --main-bg-color: #FFFBED;
+    --banner-bg-color: #040f82;
+    --main-content-bg-color: #DED1DE;
+    --footer-bg-color: #0B5925;
+    --nav-button-bg-color: #823D08;
+
+    /* GAPS, SIZING, AND BORDERS */
+    --gap-size: 15px;
+    --margin: 8px;
+    --container-padding: 15px;
+    --padding: 5px;
+    --border-radius: 15px;
+
+    /* FONTS AND FONT SIZES */
+    --main-font: Arial, sanserif;
+    --title-font: 'Times New Roman', serif;
+    --banner-title: 3.5rem;
+    --content-size: 1.2rem;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+    font-family: var(--main-font);
+}
+
+body {
+    padding: var(--gap-size);
+    background-color: var(--main-bg-color);
+}
+
+.container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 3fr auto;
+
+    margin: var(--gap-size);
+    padding: var(--container-padding);
+
+    background-color: var(--banner-bg-color);
+
+    border-radius: var(--border-radius);
+    color: white;
+}
+
+.header h1 {
+    font-family: var(--title-font);
+    font-size: var(--banner-title);
+}
+
+/* .navigation {
+    height: 100%;
+} */
+
+.navigation ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    height: 100%;
+}
+
+.navigation ul a {
+    text-decoration: none;
+    color: white;
+
+    margin: var(--margin);
+    padding: var(--container-padding);
+    background-color: var(--nav-button-bg-color);
+    border: 1px solid black;
+    border-radius: var(--border-radius);
+
+    transition: transform 0.3s ease;
+}
+
+.navigation ul a:hover {
+    transform: scale(1.2);
+}
+
+.main-content {
+    margin: var(--gap-size);
+    padding: var(--container-padding);
+    border-radius: var(--border-radius);
+
+    background-color: var(--main-content-bg-color);
+}
+
+.main-content h2,
+.main-content p {
+    margin-bottom: var(--margin);
+}
+
+.main-content ul {
+    margin: 30px;
+}
+
+.footer {
+    margin: var(--gap-size);
+    padding: var(--container-padding);
+    border-radius: var(--border-radius);
+
+    background-color: var(--footer-bg-color);
+    color: white;
+    text-align: center;
+}
