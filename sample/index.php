@@ -2,7 +2,7 @@
 $title = "Fragmenting Pages - Index";
 $banner = "Index Page";
 require('include\header.php');
-?>
+?>           
             <section>
                 <article>
                     <h1>Main page</h1>

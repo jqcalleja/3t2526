@@ -2,7 +2,7 @@
 $title = "Fragmenting Pages - Page 1";
 $banner = "Another Page";
 require('include\header.php');
-?>
+?>  
             <section>
                 <article>
                     <h1>Another page</h1>

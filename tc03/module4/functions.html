@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Sample</title>
+</head>
+<body>
+    <script>
+        // Function declration
+        hello("Joseph");
+
+        function hello(name) {
+            console.log("Hello, " + name);
+        }
+
+        // Function expression
+        //greet(); // - ERROR: function expression is not hoisted
+        const greet = function(name) {
+            console.log("Hello, " + name);
+        }
+
+        greet("JayCee");
+
+
+        // Arrow function (inline)
+        const pagbati = (name) => {
+            console.log("Hello, " + name);
+        }
+        pagbati("JR");
+
+        // Funtion with return
+        const add = (num1, num2) => {
+            return num1 + num2;
+        }
+        console.log(add(4, 6));
+
+        // Implicit return arrow function
+        const subtract = (num1, num2) => num1 - num2;
+        console.log(subtract(45, 23));
+    </script>
+</body>
+</html>

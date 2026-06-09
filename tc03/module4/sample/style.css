@@ -1,0 +1,136 @@
+:root {
+    --bg: #f5f5f5;
+    --card: #ffffff;
+    --text: #222;
+    --primary: #2563eb;
+    --border: #dcdcdc;
+    --success: #16a34a;
+    --danger: #dc2626;
+}
+
+.dark-theme {
+    --bg: #121212;
+    --card: #1e1e1e;
+    --text: #f5f5f5;
+    --primary: #60a5fa;
+    --border: #444;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    transition: 0.3s;
+}
+
+.container {
+    width: 90%;
+    max-width: 500px;
+    margin: 40px auto;
+    background: var(--card);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.theme-btn {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+}
+
+small {
+    display: block;
+    margin-top: 5px;
+}
+
+.password-container {
+    display: flex;
+}
+
+.password-container input {
+    flex: 1;
+}
+
+.password-container button {
+    width: 50px;
+}
+
+.strength-bar {
+    height: 10px;
+    background: #ddd;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+#strengthFill {
+    height: 100%;
+    width: 0%;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: var(--primary);
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button[type="submit"]:disabled {
+    background: gray;
+    cursor: not-allowed;
+}
+
+.valid {
+    color: var(--success);
+}
+
+.invalid {
+    color: var(--danger);
+}
+
+#successMessage {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: var(--success);
+}
+
+@media(max-width: 600px) {
+    .top-bar {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

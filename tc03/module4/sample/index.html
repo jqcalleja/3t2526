@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Signup Page</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="top-bar">
+            <h1>Signup Form</h1>
+            <button id="themeBtn" class="theme-btn">Dark Mode</button>
+        </div>
+
+        <form action="" id="signupForm">
+            <!-- Name -->
+            <div class="input-group">
+                <label for="">Name</label>
+                <input type="text" name="" id="name" maxlength="50">
+                <small id="nameCount">0/50</small>
+            </div>
+
+            <!-- Email -->
+            <div class="input-group">
+                <label for="">Email</label>
+                <input type="email" name="" id="email">
+                <small id=emailMsg"></small>
+            </div>
+
+            <!-- Cp Number -->
+            <div class="input-group">
+                <label for="">Phone Number</label>
+                <input type="text" name="" id="phone">
+                <small id="phoneMsg"></small>
+            </div>
+
+            <!-- Password -->
+            <div class="input-group">
+                <label for="">Password</label>
+                <div class="password-container">
+                    <input type="password" name="" id="password">
+                    <button type="button" id="togglePassword">
+                        👁
+                    </button>
+                </div>
+                <div class="strength-bar">
+                    <div id="strengthFill"></div>
+                </div>
+                <small id="strengthText"></small>
+            </div>
+
+            <!-- Confirm Password -->
+            <div class="input-group">
+                <label for="">Confirm Password</label>
+                <input type="password" name="" id="confirmPassword">
+                <small id="consfirmMsg"></small>
+            </div>
+
+            <button type="submit" id="submitBtn" disabled>
+                Sign Up
+            </button>
+        </form>
+
+        <div id="successMessage"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

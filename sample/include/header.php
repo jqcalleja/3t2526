@@ -1,3 +1,7 @@
+<?php
+date_default_timezone_set("Asia/Manila");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,6 +18,7 @@
             <div class="banner">
                 <h1><?= $banner; ?></h1>
                 <p>This is the header area</p>
+                <p><?= date("F d, Y h:i:s A"); ?></p>
             </div>
             <nav class="navigation">
                 <ul>
@@ -25,6 +30,9 @@
                     </a>
                     <a href="page2.php">
                         <li>Page 2</li>
+                    </a>
+                    <a href="page3.php">
+                        <li>Page 3</li>
                     </a>
                 </ul>
             </nav>

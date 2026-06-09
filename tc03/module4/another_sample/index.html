@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS + CSS Interactivity Demo — Sign Up</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- ── Theme Toggle ── -->
+    <div class="theme-bar" role="group" aria-label="Choose theme">
+        <button class="theme-btn active" data-theme="light" title="Light" aria-pressed="true">☀️</button>
+        <button class="theme-btn" data-theme="dark" title="Dark" aria-pressed="false">🌙</button>
+        <button class="theme-btn" data-theme="neon" title="Neon" aria-pressed="false">⚡</button>
+    </div>
+
+    <!-- ── Card ── -->
+    <div class="card" id="card">
+
+        <!-- Form view -->
+        <div id="form-view">
+            <div class="card-header">
+                <span class="badge">Demo for CSS + JavaScript</span>
+                <h1>Create an <span>account</span></h1>
+                <p class="subtitle">Fill in the form — watch CSS &amp; JS in action.</p>
+            </div>
+
+            <!-- Name -->
+            <div class="field">
+                <label for="name">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="8" r="4" />
+                        <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
+                    </svg>
+                    Full Name
+                </label>
+                <div class="input-wrap">
+                    <input type="text" id="name" placeholder="Juan dela Cruz" autocomplete="name" />
+                    <span class="input-icon" id="name-icon"></span>
+                </div>
+                <p class="helper" id="name-msg"></p>
+            </div>
+
+            <!-- Email -->
+            <div class="field">
+                <label for="email">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="4" width="20" height="16" rx="2" />
+                        <path d="m2 7 10 7 10-7" />
+                    </svg>
+                    Email
+                </label>
+                <div class="input-wrap">
+                    <input type="email" id="email" placeholder="jdc@example.com" autocomplete="email" />
+                    <span class="input-icon" id="email-icon"></span>
+                </div>
+                <p class="helper" id="email-msg"></p>
+            </div>
+
+            <!-- Phone -->
+            <div class="field">
+                <label for="phone">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.15 12 19.79 19.79 0 0 1 1.08 3.38a2 2 0 0 1 2-2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+                    </svg>
+                    Phone
+                </label>
+                <div class="input-wrap">
+                    <input type="tel" id="phone" placeholder="+639123456789" autocomplete="tel" />
+                    <span class="input-icon" id="phone-icon"></span>
+                </div>
+                <p class="helper" id="phone-msg"></p>
+            </div>
+
+            <!-- Password -->
+            <div class="field">
+                <label for="password">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="11" width="18" height="11" rx="2" />
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                    </svg>
+                    Password
+                </label>
+                <div class="input-wrap has-toggle">
+                    <input type="password" id="password" placeholder="Min. 8 characters" autocomplete="new-password" />
+                    <button class="toggle-pw" id="toggle-pw" type="button" aria-label="Show password">
+                        <svg id="eye-open" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z" />
+                            <circle cx="12" cy="12" r="3" />
+                        </svg>
+                        <svg id="eye-closed" width="17" height="17" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            style="display:none">
+                            <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94" />
+                            <path d="M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19" />
+                            <line x1="1" y1="1" x2="23" y2="23" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="strength-wrap" id="strength-wrap" style="display:none">
+                    <div class="strength-bars">
+                        <div class="bar" id="bar1"></div>
+                        <div class="bar" id="bar2"></div>
+                        <div class="bar" id="bar3"></div>
+                        <div class="bar" id="bar4"></div>
+                    </div>
+                    <span class="strength-label" id="strength-label">—</span>
+                </div>
+                <p class="helper" id="password-msg"></p>
+            </div>
+
+            <!-- Confirm Password -->
+            <div class="field">
+                <label for="confirm">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                    </svg>
+                    Confirm Password
+                </label>
+                <div class="input-wrap has-toggle">
+                    <input type="password" id="confirm" placeholder="Repeat password" autocomplete="new-password" />
+                    <button class="toggle-pw" id="toggle-confirm" type="button" aria-label="Show password">
+                        <svg id="eye-open2" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z" />
+                            <circle cx="12" cy="12" r="3" />
+                        </svg>
+                        <svg id="eye-closed2" width="17" height="17" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            style="display:none">
+                            <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94" />
+                            <path d="M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19" />
+                            <line x1="1" y1="1" x2="23" y2="23" />
+                        </svg>
+                    </button>
+                </div>
+                <p class="helper" id="confirm-msg"></p>
+            </div>
+
+            <button class="btn" id="submit-btn" disabled>Create Account</button>
+
+            <p class="demo-note">
+                🎓 This page is a classroom demo showing how JavaScript reads DOM values,<br>
+                validates data, and CSS classes + variables drive all visual states.
+            </p>
+        </div>
+
+        <!-- Success view -->
+        <div class="success-card" id="success-view">
+            <div class="checkmark-circle">
+                <svg width="36" height="36" viewBox="0 0 52 52" fill="none" stroke="var(--success)" stroke-width="3.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="14 26 22 34 38 18" />
+                </svg>
+            </div>
+            <p class="success-title">You're in! 🎉</p>
+            <p class="success-sub" id="success-name"></p>
+            <p class="success-sub" id="success-email"></p>
+            <button class="reset-btn" id="reset-btn">← Start over</button>
+        </div>
+
+    </div><!-- /card -->
+
+    <script src="script.js"></script>
+</body>
+
+</html>
