@@ -1,0 +1,83 @@
+/* Varaible declarations here.... */
+/* 
+:root {
+    --var-name: value;
+}
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: antiquewhite;
+}
+
+.container {
+    padding: 50px;
+
+    /* Grid */
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    gap: 15px;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.row-banner {
+    background-color: aquamarine;
+}
+
+.row-banner col {
+    background-color: chocolate;
+}
+
+.row-banner nav {
+    background-color: cornsilk;
+}
+
+.row-banner nav ul {
+    display: flex;
+}
+
+.col-left {
+    background-color: rgb(121, 166, 166);
+}
+
+.col-content {
+    background-color: rgb(217, 223, 145);
+}
+
+.col-right {
+    background-color: rgb(194, 173, 255);
+}
+
+.row-footer {
+    background-color: cadetblue;
+}
+
+@media (max-width: 768px) {
+    header {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
